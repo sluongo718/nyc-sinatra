@@ -56,7 +56,7 @@ class FiguresController < ApplicationController
     erb :"figures/show"
   end
 
-  patch "figures/:id" do
+  patch "/figures/:id" do
 
     @figure = Figure.find_by(id: params[:id])
     @figure.name = params[:figure][:name]
